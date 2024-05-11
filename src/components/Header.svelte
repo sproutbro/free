@@ -1,5 +1,7 @@
 <script>
+    import { signOut, signIn } from "@auth/sveltekit/client";
     import { openModal } from "../store";
+    import { page } from "$app/stores";
 </script>
 
 <header class="flex flex-col relative z-20">
@@ -17,6 +19,17 @@
             <a href="/contact" class="duration-200 hover:text-indigo-400 cursor-pointer">문의하기</a>
             <a href="/review" class="duration-200 hover:text-indigo-400 cursor-pointer">후기</a>
             <a href="/reserve" class="duration-200 hover:text-indigo-400 cursor-pointer">예약하기</a>
+            {#if $page.data.session}
+                <button on:click={() => signOut()}>
+                    Sign Out
+                </button>
+            {:else}
+                <nav>
+                    <button on:click={signIn}>
+                        Login
+                    </button>
+                </nav>
+            {/if}
         </nav>        
     </div>
 </header>

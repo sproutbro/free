@@ -21,6 +21,13 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@prisma/client": "^5.13.0"
+		"@auth/sveltekit": "^1.0.1",
+		"@prisma/client": "^5.13.0",
+		"dotenv": "^16.4.5"
+	},
+	"pnpm": {
+		"overrides": {
+		  "oauth4webapi": "npm:@jacobkim/oauth4webapi@^2.10.4"
+		}
 	}
 }
