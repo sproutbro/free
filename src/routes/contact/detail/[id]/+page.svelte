@@ -15,7 +15,7 @@
             </div>
                 <div class="px-6 py-4 bg-gray-100 border-t border-gray-200 flex justify-between items-center">
                 <span class="text-xs text-gray-500">{data.body.createdAt}</span>
-                <button onclick="window.history.back()" class="text-sm text-indigo-400 hover:blue focus:outline-none">
+                <button on:click={() => history.back()} class="text-sm text-indigo-400 hover:blue focus:outline-none">
                     뒤로 가기
                 </button>
             </div>
