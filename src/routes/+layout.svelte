@@ -1,6 +1,8 @@
 <script>
     import "../app.css";
-    import CtAs from "../components/CTAs.svelte";
+    // import CtAs from "../components/CTAs.svelte";
+    import { signOut, signIn } from "@auth/sveltekit/client";
+    import { page } from "$app/stores";
     import Footer from "../components/Footer.svelte";
     import Header from "../components/Header.svelte";
     import { openModal } from "../store";
@@ -40,7 +42,17 @@
             </button>
         </div>
         <div class="flex flex-col items-center justify-center">
-            <CtAs />
+            {#if $page.data.session}
+                <button on:click={() => signOut()}>
+                    Sign Out
+                </button>
+            {:else}
+                <nav>
+                    <button on:click={signIn}>
+                        Login
+                    </button>
+                </nav>
+            {/if}
         </div>
     </div>
 {/if}
