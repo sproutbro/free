@@ -1,6 +1,6 @@
 <script>
     import "../app.css";
-    // import CtAs from "../components/CTAs.svelte";
+    import CtAs from "../components/CTAs.svelte";
     import { signOut, signIn } from "@auth/sveltekit/client";
     import { page } from "$app/stores";
     import Footer from "../components/Footer.svelte";
@@ -27,6 +27,15 @@
                 <i class="fa-solid fa-xmark text-2xl"></i>
             </button>
         </div>
+        {#if $page.data.session}
+            <button on:click={() => signOut()}>
+                Sign Out
+            </button>
+        {:else}
+            <button on:click={signIn}>
+                Login 
+            </button>
+        {/if}
         <div class="flex flex-col gap-4 flex-1">
             <button on:click={() => reroute('/contact')}
                 class="border-none outline-none p-2 group duration-200 cursor-pointer text-left">
@@ -42,17 +51,7 @@
             </button>
         </div>
         <div class="flex flex-col items-center justify-center">
-            {#if $page.data.session}
-                <button on:click={() => signOut()}>
-                    Sign Out
-                </button>
-            {:else}
-                <nav>
-                    <button on:click={signIn}>
-                        Login
-                    </button>
-                </nav>
-            {/if}
+            <CtAs/>
         </div>
     </div>
 {/if}

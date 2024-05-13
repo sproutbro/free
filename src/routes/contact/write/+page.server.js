@@ -1,4 +1,13 @@
 import prisma from "$lib/prisma";
+import { redirect } from '@sveltejs/kit';
+
+/** @type {import('./$types').PageServerLoad} */
+export async function load(event) {
+    const auth = await event.locals.auth();
+    if(!auth) {
+        throw redirect(303, '/auth/signin');
+    }
+}
 
 /** @type {import('./$types').Actions} */
 export const actions = {
