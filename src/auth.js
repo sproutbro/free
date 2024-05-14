@@ -1,10 +1,10 @@
 import { SvelteKitAuth } from "@auth/sveltekit";
 import GitHub from "@auth/sveltekit/providers/github";
-import Google from "@auth/sveltekit/providers/google";
+// import Google from "@auth/sveltekit/providers/google";
 // import Naver from "@auth/sveltekit/providers/naver";
 
 const providers = [
-    Google,
+    // Google,
     GitHub,
     // Naver
 ]

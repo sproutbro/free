@@ -16,6 +16,5 @@
             스쿠버 장비 없이 호흡을 조절하며 심해를 탐험할 수 있어요.
             이는 <span class="text-indigo-400">물 속에서의 평화로움과 아름다움을 경험</span>할 수 있는 특별한 활동입니다.
         </p>
-        <CtAs />
     </div>
 </SectionWrapper>

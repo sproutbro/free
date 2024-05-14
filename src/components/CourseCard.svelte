@@ -23,11 +23,6 @@
                 </div>                
             {/each}
         </div>
-        <div class="flex items-center">
-            <button class="specialBtnDark mr-auto font-semibold">
-                <p>신청하기 &rarr;</p>
-            </button>
-        </div>
     </div>
     <div class={"flex flex-col dropShadow overflow-hidden rounded-b-lg " }>
         <div class="rounded-t-xl h-8 sm:h-10 bg-white opacity-60 px-3 flex items-center gap-2">

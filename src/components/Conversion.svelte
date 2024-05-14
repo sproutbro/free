@@ -9,7 +9,6 @@
     <p class="poppins text-base sm:text-lg md:text-xl">
         + 당신의 도전을 위한 완벽한 선택 +
     </p>
-    <CtAs dark={true}/>
 </section>
 
 <!-- 

@@ -16,9 +16,11 @@
             <i class="fa-solid fa-bars"></i>
         </button>
         <nav class="hidden md:flex items-center gap-4 lg:gap-6">
-            <a href="/contact" class="duration-200 hover:text-indigo-400 cursor-pointer">문의하기</a>
-            <a href="/review" class="duration-200 hover:text-indigo-400 cursor-pointer">후기</a>
-            <a href="/reserve" class="duration-200 hover:text-indigo-400 cursor-pointer">예약하기</a>
+            <a href="/#course" class="duration-200 hover:text-indigo-400 cursor-pointer">코스소개</a>
+            <a href="/#review" class="duration-200 hover:text-indigo-400 cursor-pointer">후기</a>
+            <a href="/#faqs" class="duration-200 hover:text-indigo-400 cursor-pointer">자주묻는질문</a>
+            <a href="/contact" class="duration-200 hover:text-indigo-400 cursor-pointer">예약하기</a>
+            <a href="/dev-diary" class="duration-200 hover:text-indigo-400 cursor-pointer">개발일기</a>
             {#if $page.data.session}
                 <button on:click={() => signOut()}>
                     Sign Out

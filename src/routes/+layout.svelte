@@ -9,11 +9,6 @@
 
     let y;
     $: outerHeight = 0;
-
-    function reroute(href) {
-        $openModal = false;
-        window.location.href = href;
-    }
 </script>
 
 {#if $openModal}
@@ -37,21 +32,26 @@
             </button>
         {/if}
         <div class="flex flex-col gap-4 flex-1">
-            <button on:click={() => reroute('/contact')}
+            <a href="/#course" on:click={() => {$openModal = false}}
                 class="border-none outline-none p-2 group duration-200 cursor-pointer text-left">
-                <p class="duration-200 group-hover:pl-2 nanum text-3xl font-semibold">문의하기<i class="fa-solid fa-chevron-right text-xl pl-4" /></p>
-            </button>
-            <button on:click={() => reroute('/review')}
+                <p class="duration-200 group-hover:pl-2 nanum text-3xl font-semibold">코스소개<i class="fa-solid fa-chevron-right text-xl pl-4"/></p>
+            </a>
+            <a href="/#review" on:click={() => {$openModal = false}}
                 class="border-none outline-none p-2 group duration-200 cursor-pointer text-left">
                 <p class="duration-200 group-hover:pl-2 nanum text-3xl font-semibold">후기<i class="fa-solid fa-chevron-right text-xl pl-4"/></p>
-            </button>
-            <button on:click={() => reroute('/reserve')}
+            </a>
+            <a href="/#faqs" on:click={() => {$openModal = false}}
+                class="border-none outline-none p-2 group duration-200 cursor-pointer text-left">
+                <p class="duration-200 group-hover:pl-2 nanum text-3xl font-semibold">자주묻는 질문<i class="fa-solid fa-chevron-right text-xl pl-4"/></p>
+            </a>
+            <a href="/contact" on:click={() => {$openModal = false}}
                 class="border-none outline-none p-2 group duration-200 cursor-pointer text-left">
                 <p class="duration-200 group-hover:pl-2 nanum text-3xl font-semibold">예약하기<i class="fa-solid fa-chevron-right text-xl pl-4"/></p>
-            </button>
-        </div>
-        <div class="flex flex-col items-center justify-center">
-            <CtAs/>
+            </a>
+            <a href="/dev-diary" on:click={() => {$openModal = false}}
+                class="border-none outline-none p-2 group duration-200 cursor-pointer text-left">
+                <p class="duration-200 group-hover:pl-2 nanum text-3xl font-semibold">개발일기<i class="fa-solid fa-chevron-right text-xl pl-4"/></p>
+            </a>
         </div>
     </div>
 {/if}
