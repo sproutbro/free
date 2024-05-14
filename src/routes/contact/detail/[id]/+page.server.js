@@ -8,7 +8,38 @@ export async function load({ params }) {
             id: parseInt(id)
         }
     })
+
+    const comments = await prisma.comment.findMany({
+        where: {postId: parseInt(id)},
+        orderBy: { createdAt: 'desc' }
+    })
+
+    console.log(comments)
+
     return {
-        body: post
+        post, comments
     }
 }
+
+/** @type {import('./$types').Actions} */
+export const actions = {
+    default: async ({request, locals, params}) => {
+        const {id} = params;
+
+        const postId = parseInt(id);
+
+        const name = "sddsfdsf";
+        const email = "sdfdsf";
+        const data = await request.formData();
+        const content = data.get("comment")
+
+        const newComment = await prisma.comment.create({
+            data: {
+                content,
+                email,
+                name,
+                postId,
+            }
+        })
+    }
+};
