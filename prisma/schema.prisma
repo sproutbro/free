@@ -21,3 +21,11 @@ model Post {
   name      String?
   email     String?
 }
+
+model DevDiary {
+  id        Int      @id @default(autoincrement())
+  title     String
+  content   String
+  createdAt DateTime @default(now())
+  name      String?
+}
