@@ -14,7 +14,9 @@
         <div class="max-w-lg mx-auto bg-white shadow-md rounded-lg overflow-hidden">
             <div class="px-6 py-4">
                 <h1 class="text-3xl font-semibold text-gray-800 mb-4">{data.post.title}</h1>
-                <p class="text-gray-600">{data.post.content}</p>
+                <pre>
+                    <pre class="text-gray-600">{data.post.content}</pre>
+                </pre>
                 {#if data.comments}
                     <h1 class="text-3xl font-semibold text-gray-800 mb-4">댓글</h1>
                     {#each data.comments as comment}

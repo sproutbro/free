@@ -18,7 +18,7 @@
 개발 연습겸 취업할때까지 조금씩 개발예정
 취업못하면 나중에 프다 강사자격증따서 나중에 써먹을홈피
 
-EC2 : Oracle Cloud
+SERVER-HOSTING : Oracle Cloud
 SERVER-OS : Centos 8
 DB : Postgresql
 Web framework : Sveltekit
