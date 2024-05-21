@@ -1,17 +1,18 @@
-import { SvelteKitAuth } from "@auth/sveltekit";
-import GitHub from "@auth/sveltekit/providers/github";
-// import Google from "@auth/sveltekit/providers/google";
-// import Naver from "@auth/sveltekit/providers/naver";
+import { SvelteKitAuth } from "@auth/sveltekit"
+// import facebook from "@auth/sveltekit/providers/facebook";
+import github from "@auth/sveltekit/providers/github";
+import kakao from "@auth/sveltekit/providers/kakao";
+
 
 const providers = [
-    // Google,
-    GitHub,
-    // Naver
+    github,
+    // facebook,
+    kakao
 ]
 
-export const { handle, signIn, signOut  } = SvelteKitAuth({
+export const { handle, signIn, signOut} = SvelteKitAuth({
     providers,
-    trustHost: true,
+    providers,
     theme: {
         logo: "https://next-auth.js.org/img/logo/logo-xs.png",
     }

@@ -21,16 +21,13 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@auth/prisma-adapter": "^2.1.0",
 		"@auth/sveltekit": "^1.0.1",
 		"@godaddy/terminus": "^4.12.1",
 		"@prisma/client": "^5.13.0",
 		"dotenv": "^16.4.5",
 		"express": "^4.19.2",
-		"helmet": "^7.1.0"
-	},
-	"pnpm": {
-		"overrides": {
-			"oauth4webapi": "npm:@jacobkim/oauth4webapi@^2.10.4"
-		}
+		"helmet": "^7.1.0",
+		"resend": "^3.2.0"
 	}
 }
