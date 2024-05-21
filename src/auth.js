@@ -13,6 +13,7 @@ const providers = [
 export const { handle, signIn, signOut} = SvelteKitAuth({
     providers,
     providers,
+    trustHost: true,
     theme: {
         logo: "https://next-auth.js.org/img/logo/logo-xs.png",
     }
