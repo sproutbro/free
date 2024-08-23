@@ -48,10 +48,6 @@
                 class="border-none outline-none p-2 group duration-200 cursor-pointer text-left">
                 <p class="duration-200 group-hover:pl-2 nanum text-3xl font-semibold">예약하기<i class="fa-solid fa-chevron-right text-xl pl-4"/></p>
             </a>
-            <a href="/dev-diary" on:click={() => {$openModal = false}}
-                class="border-none outline-none p-2 group duration-200 cursor-pointer text-left">
-                <p class="duration-200 group-hover:pl-2 nanum text-3xl font-semibold">개발일기<i class="fa-solid fa-chevron-right text-xl pl-4"/></p>
-            </a>
         </div>
     </div>
 {/if}
